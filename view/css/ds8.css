@@ -1,0 +1,1240 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+	background-color: white;
+}
+strong{
+	font-weight: bold;
+}
+body{
+}
+article{
+  width: 80%;
+  height: auto;
+  background-color: white;
+	margin: 0 auto;
+	padding-bottom: 3em;
+
+}
+footer{
+	padding-top: 2em;
+	background-color:  #001b42;
+	color: white;
+	width: 100%;
+	bottom: 0;
+}
+iframe{
+	position: relative;
+}
+h1{
+	font-family:   sans-serif;
+}
+#debug{
+	text-align: center;
+	font-family:   sans-serif;
+}
+.phpdebug{
+	color: red;
+}
+/********************************************nav***************************************/
+ul{
+	  background: #F0F0EF; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#F0F0EF, #d8d8d7); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(#F0F0EF,#d8d8d7); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(#F0F0EF, #d8d8d7); /* For Firefox 3.6 to 15 */
+	 background: linear-gradient(#00062D, #00062D); /* Standard syntax */
+  width: 100%;
+  height: auto;
+  order: 2;
+  margin: 0 auto;
+	display: flex;
+	border-top: 1px groove black;
+	border-bottom: 1px groove black;
+
+}
+#ulconteent{
+	width: 50%;
+	margin-left: 10%;
+	height: auto;
+	background: #F0F0EF; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#333, #d8d8d7); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(#333,#d8d8d7); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(#333, #d8d8d7); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(#00062D, #00062D); /* Standard syntax */
+ float: left;
+ display: flex;
+
+}
+li {
+  height: auto;
+  overflow: hidden;
+}
+li a {
+   color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.9em;
+		float: left;
+
+
+}
+hr{
+	width: 80%;
+}
+li a:hover {
+    color: #1E90FF;
+		border-bottom: 1px;
+		border-style: solid;
+		border-color: #1E90FF;
+}
+li a.active{
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #1E90FF;
+}
+.iconProfile{
+	display: inline;
+	align-items:center;
+
+}
+.iconProfile img{
+	height: 25px;
+	width: 25px;
+	vertical-align:middle;
+
+}
+/*--------------------------------------text------------------------------------------------*/
+h1.heading {
+    display: block;
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    padding-left: 1.5em;
+		color: #A6A100;
+}
+h1.extratitle {
+    display: block;
+    font-size: 1.3em;
+    padding-top: 1em;
+    font-weight: bold;
+    text-align: center;
+		color: white;
+}
+h2.subtitle {
+    display: block;
+    font-size: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 2em;
+    margin-left: 1.5em;
+    margin-right: 0;
+    font-weight: bold;
+    padding-left: 1.5em;
+		color: #8E8A00;
+}
+p.formtitle{
+	display: block;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+	color: #2079FE;
+	padding-top: 1em;
+	margin-bottom: 1em;
+	border-bottom: solid 1px grey;
+
+}
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+		margin-left: 3em;
+		padding-right: 3em;
+}
+p.hotelmanager {
+    font-family: Arial, Helvetica, sans-serif;
+		margin-left: 3em;
+		padding-right: 3em;
+		margin-bottom: 1.5em;
+		font-weight: bold;
+	}
+	p.footer {
+	    font-family: Arial, Helvetica, sans-serif;
+			margin-left: 15%;
+			margin-right: 15%;
+			margin-bottom: 1em;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		p.footerinfo {
+		    font-family: Arial, Helvetica, sans-serif;
+				text-align: center;
+				color: #757575;
+				font-size: 0.8em;
+
+			}
+p.dots{
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	font-size: 1.01em;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+p.icontxt{
+	display: inline;
+	color: white;
+
+}
+/*--------------------------------------html divs/funcs------------------------------------------------*/
+#container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color:  white;
+
+}
+#header{
+  background-color: #003580;
+  color: white;
+  width: 100%;
+  height: auto;
+  order: 1;
+	margin: 0 auto;
+
+}
+
+
+#homeimg {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+#homeimg img {
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid black;
+}
+
+#header img{
+  padding: 0.5em;
+  padding-left: 2em;
+  height: 55px;
+  width: 125px;
+
+}
+/***********************************************FOOTER************************************************/
+#footerextra{
+	background-color: #003580;
+	height: 3em;
+	padding-top: 1em;
+	border-top: solid 1px white;
+}
+#footerlinks{
+	padding-top: 2em;
+	width: 100%;
+	height: auto;
+}
+/*******************************************FLOTING EXTRA MENU********************************************/
+#hotelextramenu{
+	background-color: #000077;
+	width: 100%;
+	height: auto;
+	color: white;
+	box-shadow: 10px 10px 5px #888888;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+#hotelextramenu img{
+	height: 13px;
+	width: 13px;
+/*****************************************************GOOGLE MAP ******************************************/
+}
+#googlemap{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+  text-align: center;
+	margin-top: 5em;
+
+
+}
+p.roominfo{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.05em;
+	padding-top: 1em;
+	display: block;
+	color: #696969;
+}
+.googlecont{
+	width: 100%;
+	height: auto;
+	position: relative;
+	float: left;
+}
+#googleform{
+	padding-top: 2em;
+}
+#bookroomfromgooogle{
+	width: 100%;
+	height: 3em;
+	background-color: #001b42;
+	border: none;
+	color: white;
+}
+
+#hotelroominfo {
+   position: absolute;
+   top: 0;
+   left: 15%;
+	 height: auto;
+	 width: 25%;
+   background-color: white;
+
+}
+#hotelroominfoimg{
+
+}
+#hotelroominfoimg img{
+ width: 100%;
+ height: auto;
+}
+/***************************************************SHOW AND HIDE IN HOME *************************/
+#serbox{
+	background-color: #DCDCDC;
+	width: 100%;
+	height: auto;
+  display: flex;
+	margin-top: 4em;
+	border-bottom: solid 1px grey;
+}
+#serbox2{
+	background-color: #DCDCDC;
+	width: 100%;
+	height: auto;
+	display: none;
+	border-bottom: solid 1px grey;
+}
+#serboxshowmore{
+	display: block;
+	text-align: center;
+	background-color: #DCDCDC;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	border-bottom: solid 1px grey;
+}
+
+#serboxshowmore2{
+	display: none;
+	text-align: center;
+	background-color: #DCDCDC;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	border-bottom: solid 1px grey;
+}
+#showmoreimg{
+	vertical-align:middle;
+	padding-top: 0.2px;
+	padding-left: 5px;
+}
+#showlessimg{
+	vertical-align:middle;
+	padding-top: 0.2px;
+	padding-left: 5px;
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#serbox img{
+	height: 25px;
+	width: 25px;
+	margin-right: 0.5em;
+	vertical-align:middle;
+
+}
+
+#serbox2 img{
+	height: 25px;
+	width: 25px;
+	margin-right: 0.5em;
+	vertical-align:middle;
+
+}
+
+#section{
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.service{
+	margin-left: 2em;
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+.leftside{
+	width: 70%;
+	height: auto;
+	float: left;
+}
+.rightside{
+	width: 30%;
+	height: auto;
+	float: right;
+}
+.serviceleft{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+.serviceright{
+	width: 50%;
+	height: auto;
+	float: right;
+}
+/*--------------------------------------small icons------------------------------------------------*/
+.footericons{
+	width: 25%;
+	height: auto;
+	background-color: #001b42;
+	align-items: center;
+	margin: 0 auto;
+	padding-bottom: 1em;
+
+
+
+}
+.icon{
+display: inline;
+}
+.icon img{
+	height: 20px;
+	width: 22px;
+	margin-right: 0.5em;
+	vertical-align:middle;
+}
+.icon a:link{
+	text-decoration: none;
+}
+
+/*--------------------------------------Forms------------------------------------------------*/
+.errorbox{
+	color: red;
+	width: 40%;
+	height: auto;
+	margin: 0 auto;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+p.errortxt{
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+.logout{
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 6px;
+    cursor: pointer;
+		font-size: 13px;
+    margin-right: 8em;
+
+}
+#registerForm, .registerForm{
+	height: auto;
+	width: 35%;
+	margin: 3em auto;
+	float: center;
+	top: 2em;
+	border: solid 1px black;
+	background-color: white;
+	border-radius: 20px;
+}
+
+#backgroundimg{
+	background-image: url('../images/gallery/pool.jpg');
+	width: 100%;
+	height: auto;
+	 background-size: cover;
+}
+#backgroundimg2{
+	background-image: url('../images/gallery/pool2.jpeg');
+	width: 100%;
+	height: auto;
+   background-size: cover;
+}
+
+input[type=text], input[type=password]{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+	display: block;
+	margin-left: 10%;
+	border: solid 1px #dcdcdc;
+
+}
+
+textarea{
+	width: 80%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	display: block;
+	margin-left: 10%;
+}
+
+label{
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.formbtn {
+  background-color: #2079FE;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+	border-radius: 8px;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+form{
+	height: auto;
+	width: 100%;
+}
+/*--------------------------------------news page------------------------------------------------*/
+.newssection{
+	width: 100%;
+	height: auto;
+  border: solid 2px #DCDCDC;
+	margin-bottom: 3em;
+	padding: 15px 19px;
+
+}
+.newssec{
+	width: 100%;
+	margin-bottom: 2em;
+}
+.eventtitle{
+	width: 100%;
+	margin-bottom: 2em;
+	margin-left: 4%;
+}
+.eventdate{
+	width: 100%;
+}
+.eventtext{
+	width: 100%;
+}
+p.newstitle{
+	width: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	height: auto;
+}
+p.newsdate{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+		height: auto;
+		text-align: right;
+}
+
+a.deleteEvent{
+ text-align: center;
+ text-decoration: none;
+ color: white;
+ background-color: #2079FE;
+ border-radius: 10px;
+ padding: 6px 7px;
+ float: right;
+}
+
+.bottondiv{
+	width: 100%;
+	height: auto;
+	background-color: red;
+	display:block;
+}
+.addnew{
+	float: right;
+	width: 9em;
+
+}
+/************************************************* drop down menu *******************************************/
+.dropdown {
+    float: right;
+    overflow: hidden;
+		right: 0;
+
+}
+.navright{
+	float: right;
+	width: 30%;
+	margin-right: 10%;
+}
+
+.dropdown .dropbtn {
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 16px;
+    background-color: inherit;
+				color: white;
+}
+input:invalid{
+	border: 2px solid red;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	color: #1E90FF;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+		font-family: Arial, Helvetica, sans-serif;
+		color: white;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #1E90FF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/****************************************** SLIDER **************************************************************/
+#slider{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+
+}
+/***************************************************Gallery**********************************/
+#gallerytop{
+	width: 100%;
+	margin-bottom: 3em;
+	height: auto;
+}
+.gallerytopimg{
+	width: 100%;
+	height: auto;
+}
+
+
+.gallerysection{
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+.gallarycont{
+	padding-left: 1.65%;
+	padding-right: 1.65%;
+	float: left;
+	width: 30%;
+	height: auto;
+}
+.gallarytextcont{
+	padding-left: 1.65%;
+	padding-right: 1.65%;
+	float: left;
+	height: auto;
+	margin-bottom: 1em;
+	color: grey;
+	width: 100%;
+}
+h1.gallarytext{
+	width: 100%;
+	text-align: center;
+}
+.galleryimg{
+ width: 100%;
+ height: 210px;
+}
+.gallarytitlescont{
+	width: 100%;
+  float: left;
+	height: auto;
+	float: center;
+	margin-top: 3em;
+	margin-bottom: 1.5em;
+	border-bottom: solid 1px #1E90FF;
+	text-align: center;
+
+}
+.gallerytitles{
+	font-size: 1.7em;
+  text-align: center;
+	float: center;
+	font-weight: bold;
+	color: #1E90FF;
+
+}
+/************************************jump nav on gallery ************************************/
+#gallerynavigation{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-bottom: 2em;
+	border: 1px solid #DCDCDC;
+}
+.jumplinks{
+	align-items: center;
+	width: 25%;
+	text-align: center;
+	text-decoration: none;
+	border: 0.1px solid #DCDCDC;
+	height: 4em;
+	line-height: 4em;
+  color: black;
+}
+.jumplinks:hover{
+	background-color: #B8860B;
+	color: white;
+}
+input.profileinput{
+	margin-bottom: 3em;
+}
+label.profiletext{
+	font-size: 1.2em;
+}
+/********************************************ABOUT PAGE**************************************/
+#aboutimg{
+	width: 100%;
+	height: auto;
+}
+#aboutimg img{
+	width: 100%;
+	height: auto;
+}
+/********************************************EDIT USERS ************************************/
+#edituserssec{
+	width: 100%;
+	height: auto;
+	border: solid 1px #A9A9A9;
+	margin-bottom: 1em;
+	display: flex;
+}
+#editusertitle{
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid black;
+	margin-bottom: 1em;
+	display: flex;
+}
+.usersleft{
+	width: 32%;
+	height: auto;
+	float: left;
+
+}
+
+.usersright{
+	width: 32%;
+	height: auto;
+	float: right;
+
+}
+p.userstext{
+	text-align: center;
+}
+.userbuttons{
+	float: right;
+	margin-top: 1em;
+}
+/****************************************************ADMIN FEEDBACK VIEW****************************/
+#feedbackadmin{
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+	margin-bottom: 1em;
+}
+p.adminfeedback{
+	width: 100%;
+	margin: 1em;
+}
+.deletebtnsec{
+	width: 50%;
+	float: right;
+	margin: 1em;
+}
+/**********************************************************BOOKING PAGE*******************************/
+#main-image{
+	width: 100%;
+	height: auto;
+	position: relative;
+
+}
+#main-image img{
+	width: 100%;
+	height: auto;
+}
+#main-image-booking {
+   position: absolute;
+	 width: 100%;
+   bottom: 0;
+
+   background-color: black;
+	 background-color: rgba(0, 0, 0, .7);
+	 color: white;
+
+}
+h1.book-title{
+	 z-index: 2;
+	 position: absolute;
+	 top: 40%;
+	 left: 0;
+	 right: 0;
+	 font-size: 3.5em;
+   font-weight: bold;
+	 width: 100%;
+	 padding: 0;
+	 margin: 0;
+	 text-align: center;
+	 color: white;
+	 font-family: sans-serif;
+}
+.bokkingdates{
+	width: 65%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+	margin-left: 10%;
+	border: solid 1px #dcdcdc;
+}
+.booking-label{
+	font-family: sans-serif;
+
+}
+.booking-dates-left{
+	width: 50%;
+	float: left;
+	padding-top: 5px;
+	padding-bottom:5px;
+}
+.booking-dates-right{
+	width: 50%;
+	float: right;
+	padding-bottom:5px;
+	padding-top: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url('../images/icons/calendar1.jpg') no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+#bookpage-rooms-container{
+	width: 100%;
+	height: auto;
+	border: 1px solid #D3D3D3;
+	margin-top: 3em;
+
+}
+h2.rooms-title{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+	font-weight: bold;
+	color: #1E90FF;
+	font-family: sans-serif;
+}
+h3.info-title{
+	font-family: sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+}
+.booking-rooms{
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	border-bottom: 1px solid #D3D3D3;
+	display: flex;
+	margin-top: 3em;
+}
+.room-image-left{
+	width: 38%;
+	height: auto;
+	float: left;
+	margin-right: 4%;
+}
+.room-image-left img{
+	width: 100%;
+	height: auto;
+
+}
+.room-text-right{
+	width: 58%;
+  float: right;
+	height: auto;
+	padding-bottom: 2em;
+}
+p.room-info{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.room-icons{
+	width: 100%;
+	height: auto;
+	margin-top: 2em;
+	border-top: 1px solid #D3D3D3;
+	border-bottom: 1px solid #D3D3D3;
+}
+.room-icons img{
+	height: 20px;
+	width: 22px;
+	margin-right: 0.5em;
+	vertical-align:middle;
+	padding-left: 10px;
+}
+.button-labels label {
+    float: right;
+    border: solid 1px #ddd;
+    background-color: #eee;
+    width: auto;
+		height:auto;
+		color: white;
+		background-color: #2079FE;
+    padding: 14px 20px;
+		border: solid 1px black;
+		font-family: Arial, Helvetica, sans-serif;
+}
+.bookingform-labels{
+	width: 100%;
+}
+.booking-question-text{
+	width: 100%;
+	display: block;
+	font-weight: bold;
+
+}
+input:invalid{
+	border: solid 3px red;
+
+}
+input.booking-form-inputs{
+	display: block;
+	width: 50%;
+}
+.booking-form-labels{
+	margin-top: 2em;
+}
+#paypal{
+	width: auto;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	display: block;
+	margin-left: 10%;
+	border: solid 1px #dcdcdc;
+}
+#numdays2{
+	width: 20%;
+	display: inline;
+}
+#costpernight{
+	width: 20%;
+	display: inline;
+}
+#result{
+	width: 20%;
+	display: inline;
+	float: left;
+
+}
+.button-labels-calculate label{
+	float: left;
+	border: solid 1px #ddd;
+	background-color: #eee;
+	width: auto;
+	height:auto;
+	color: white;
+	background-color: #2079FE;
+	padding: 14px 20px;
+	border: solid 1px black;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+}
+.totalprice-div{
+	display: flex;
+}
+/***************************************************** invoice************************/
+#confirmation{
+	width: 97%;
+	border: 1px solid black;
+	height: auto;
+	background-color: #2079FE;
+	margin: 1em auto;
+}
+#confirmation img{
+	height: 14px;
+	width: 18px;
+	vertical-align:middle;
+	display: inline;
+	margin: 1.3em;
+	margin-left: 1.5em;
+	margin-right: 0.5em;
+}
+h3.invoice-box-titles{
+	font-family: sans-serif;
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+	color: #2079FE;
+}
+p.confirmation-text{
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline;
+	font-size: 1.1em;
+	margin-right: 0.2em;
+	margin-top: 0.5em;
+}
+#invoice-container{
+	width: 90%;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+	border: 1px solid #D3D3D3;
+}
+.info-box{
+	width: 25%;
+	float: left;
+	border: 1px solid #D3D3D3;
+	text-align: center;
+}
+.invoice-title{
+	width: 25%;
+	float: left;
+	border: 1px solid #D3D3D3;
+	text-align: center;
+}
+p.invoice-info-text{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+/***************************************************************MODAL*************************************/
+/* The Modal (background) */
+#Registermodal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#model-container, #model-container1, #model-container2, #model-container3{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/*
+
+
+/* Modal Content */
+#booking-success {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 50%;
+		-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+/* The Close Button */
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+		padding-right: 1em;
+		display: inline;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close1 {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+		padding-right: 1em;
+		display: inline;
+}
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.topbar{
+	width: 100%;
+	background-color: #2079FE;
+	padding: 14px 16px;
+}
+p.topbar-text{
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
+	width: 100%;
+}
+p.modal-text{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 1em;
+	margin-top: 1em;
+	margin-right: 1em;
+}
+.model-confim{
+	background-color: #2079FE;
+	color: white;
+	padding: 14px 20px;
+  font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+	width: 4em;
+	border-radius: 8px;
+	margin: 2em;
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/***************************************LOGIN FORM*******************************/
+
+.login-container{
+overflow: hidden;
+}
+
+.modal-yes-button{
+	background-color: #2079FE;
+	color: white;
+	padding: 14px 20px;
+  font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+	width: 4em;
+	border-radius: 8px;
+  width: 50%;
+	float: left;
+  margin-bottom: 1em;
+	margin: 0 auto;
+
+}
+.modal-no-buton{
+	background-color: grey;
+	color: white;
+	padding: 14px 0px;
+  font-size: 1.2em;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+	border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	text-align: center;
+	text-decoration: none
+}
+.modal-buttons-cont{
+	margin-top: 1em;
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+.val_error{
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color: red;
+	text-align: center;
+}
+
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+	opacity: 0.7;
+}

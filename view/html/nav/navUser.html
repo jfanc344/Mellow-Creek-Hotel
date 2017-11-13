@@ -1,0 +1,28 @@
+<html>
+
+<!--  nav for USERS-->
+<ul>
+  <div id="ulconteent">
+    <li><a href="mellowcreek.php">HOME</a></li>
+    <li><a href="booking.php">BOOK ROOM</a></li>
+    <li><a href="news.php">NEWS</a></li>
+    <li><a href="gallery.php">GALLERY</a></li>
+    <li><a href="about.php">ABOUT</a></li>
+    <li><a href="contact.php">CONTACT US</a></li>
+
+  </div>
+    <div class="navright">
+  <div class="dropdown">
+    <button class="dropbtn"><div class="iconProfile"><img src="../images/icons/profile.png" alt="profile">
+    </div><?php echo ''.$_SESSION["Username"].'' ?>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="editprofile.php">Edit Profile</a>
+      <a href="../../controller/logout.php">Logout</a>
+    </div>
+  </div>
+</div>
+</ul>
+
+<html>

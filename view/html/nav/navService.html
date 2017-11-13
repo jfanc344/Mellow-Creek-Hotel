@@ -1,0 +1,27 @@
+<html>
+<!--  nav for Customer Service -->
+
+<ul>
+<div id="ulconteent">
+  <li><a href="mellowcreek.php"> HOME</a></li>
+  <li><a href="news.php"> NEWS AND EVENTS</a></li>
+  <li><a href="#bokkings">EDIT BOOKINGS</a></li>
+  <li><a href="editusers.php">MEMBERS</a></li>
+</div>
+  <div class="navright">
+  <div class="dropdown">
+    <button class="dropbtn"><div class="iconProfile"><img src="../images/icons/profile.png" alt="profile">
+    </div><?php echo ''.$_SESSION["Username_service"].'' ?>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../../controller/logout.php">Logout</a>
+    </div>
+  </div>
+</div>
+
+</ul>
+
+
+
+<html>
