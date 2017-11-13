@@ -76,3 +76,57 @@ var myResult = costpernight * numdays2;
 result.value = myResult;
 
 }
+// Get the modal
+var modal = document.getElementById('model-container');
+var modal1 = document.getElementById('model-container1');
+var modal2 = document.getElementById('model-container2');
+var modal3 = document.getElementById('model-container3');
+
+
+
+
+// Get the button that opens the modal
+var btn = document.getElementById("exitinvoice");
+var loginuser = document.getElementById("login-btn");
+var loginservice = document.getElementById("loginservice");
+var loginadmin = document.getElementById("loginadmin");
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+
+var exit = document.getElementById("exit");
+
+// When the user clicks the button, open the modal
+loginuser.onclick = function(){
+    modal1.style.display = "block";
+}
+loginservice.onclick = function(){
+    modal2.style.display = "block";
+}
+loginadmin.onclick = function(){
+    modal3.style.display = "block";
+}
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+function exitform(){
+  modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
+}
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }

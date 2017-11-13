@@ -53,7 +53,7 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
   <article>
 
     <div class="errorbox" style="margin-top:2em; width:60%;">
-       <p class="errortxt" style="font-size: 1.2em;">
+
     <?php
     if(isset($_SESSION['Booking_error'])) {
       //the user has previosly attempted a logged in
@@ -65,7 +65,7 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 
 
     ?>
-  </p>
+
 </div>
 
 <div id="bookpage-rooms-container">
