@@ -10,6 +10,7 @@ if(!isset($_SESSION['Username_manager'])) {
 <head>
   <title> Register </title>
   <?php include('tags/header.html'); ?>
+  <script src="../js/validation.js" type="text/javascript" defer="defer"></script>
 </head>
 
 <body>

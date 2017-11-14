@@ -124,7 +124,7 @@ session_start();
   <div class="txtleft" style="width:49%;float:left;border-right:solid 1px #696969;"> <p class="roominfo" style="padding-top:0;"> Check-in from 14h00</p> </div>
   <div class="txtleft" style="width:50%;float:right;"> <p class="roominfo" style="padding-top:0;"> Check-out up to 11h00</p> </div>
   </div>
-  <form id="googleform" action="../html/bookroom.php"><button id="bookroomfromgooogle">Book Room </button></form>
+  <form id="googleform" action="booking.php"><button id="bookroomfromgooogle">Book Room </button></form>
 
 </div>
     </div>
@@ -132,6 +132,7 @@ session_start();
   </div>
 <!--***************************************************MODALS*********************************-->
 <?php include('modals/loginmodals.php'); ?>
+
   </article>
 </div>
 <!--***************************************************FOOTER*********************************-->

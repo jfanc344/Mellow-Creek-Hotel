@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once("../model/db.php");
 require_once("../model/dbfunc.php");
 
@@ -93,6 +95,23 @@ if($_REQUEST['action_type'] == 'manager') {
     //function call
     deleteData($table,$condition);
     header('location:../view/html/viewallusers.php');
+  }
+  catch(PDOException $e){
+    echo "Error: ".$e -> getMessage();
+    die();
+   }
+  }
+}
+if($_REQUEST['action_type'] == 'booking') {
+  if(!empty($_GET['BookingID'])){
+    $table="booking";
+    $condition = array('BookingID' => $_GET['BookingID']);
+  try
+  {
+    //function call
+    deleteData($table,$condition);
+    unset($_SESSION['invoice']);
+    header('location:../view/html/mellowcreek.php');
   }
   catch(PDOException $e){
     echo "Error: ".$e -> getMessage();

@@ -1,3 +1,11 @@
+function runEffect() {
+    setTimeout(function(){
+        var selectedEffect = 'blind';
+        var options = {};
+        $("#Hotelextramenu").hide(selectedEffect, options, 500)
+     }, 5000);
+}
+
 var former = console.log;
 console.log = function(msg){
     former(msg);
@@ -14,6 +22,7 @@ function showmore() {
     var x = document.getElementById("serbox2");
     var y = document.getElementById("serboxshowmore");
     var t = document.getElementById("serboxshowmore2");
+
     if (x.style.display === "none") {
         x.style.display = "flex";
         t.style.display = "block";
@@ -33,6 +42,7 @@ function showless() {
         y.style.display = "block";
     }
 }
+
 $(document).ready(function (){
     $(".ratiobtn").click(function (){
         $('html, body').animate({
@@ -76,6 +86,10 @@ var myResult = costpernight * numdays2;
 result.value = myResult;
 
 }
+
+
+
+
 // Get the modal
 var modal = document.getElementById('model-container');
 var modal1 = document.getElementById('model-container1');

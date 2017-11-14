@@ -54,12 +54,18 @@ h1{
 .phpdebug{
 	color: red;
 }
+@media only screen and (max-width: 700px) {
+	article{
+		width: 100%;
+
+	}
+}
 /********************************************nav***************************************/
 ul{
-	  background: #F0F0EF; /* For browsers that do not support gradients */
-		background: -webkit-linear-gradient(#F0F0EF, #d8d8d7); /* For Safari 5.1 to 6.0 */
-	 background: -o-linear-gradient(#F0F0EF,#d8d8d7); /* For Opera 11.1 to 12.0 */
-	 background: -moz-linear-gradient(#F0F0EF, #d8d8d7); /* For Firefox 3.6 to 15 */
+	  background: #00062D; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#00062D, #00062D); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(#00062D, #00062D); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(#00062D, #00062D); /* For Firefox 3.6 to 15 */
 	 background: linear-gradient(#00062D, #00062D); /* Standard syntax */
   width: 100%;
   height: auto;
@@ -73,13 +79,13 @@ ul{
 
 }
 #ulconteent{
-	width: 50%;
+	width: 60%;
 	margin-left: 10%;
 	height: auto;
-	background: #F0F0EF; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(#333, #d8d8d7); /* For Safari 5.1 to 6.0 */
- background: -o-linear-gradient(#333,#d8d8d7); /* For Opera 11.1 to 12.0 */
- background: -moz-linear-gradient(#333, #d8d8d7); /* For Firefox 3.6 to 15 */
+	background: #00062D; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#00062D, #00062D); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(#00062D, #00062D); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(#00062D, #00062D); /* For Firefox 3.6 to 15 */
  background: linear-gradient(#00062D, #00062D); /* Standard syntax */
  float: left;
  display: flex;
@@ -88,6 +94,7 @@ ul{
 li {
   height: auto;
   overflow: hidden;
+
 }
 li a {
    color: white;
@@ -124,6 +131,42 @@ li a.active{
 	width: 25px;
 	vertical-align:middle;
 
+}
+@media only screen and (max-width: 700px) {
+	ul{
+		order: 1;
+		display: block;
+		height: 10em;
+	}
+	#ulconteent{
+		margin-left: 0%;
+		display: none;
+		width: 100%;
+
+		height: auto;
+
+		float: left;
+		display:block;
+
+
+
+
+
+	}
+	li {
+		width: 100%;
+		display: block;
+		float: left;
+		height: auto;
+		background-color: #00062D;
+		border-bottom: 1px solid #1E90FF;
+
+	}
+	li a{
+		width: 100%;
+		display: block;
+		float: left;
+	}
 }
 /*--------------------------------------text------------------------------------------------*/
 h1.heading {
@@ -248,6 +291,12 @@ p.icontxt{
   width: 125px;
 
 }
+@media only screen and (max-width: 700px) {
+	#header{
+	  order: 2;
+
+	}
+}
 /***********************************************FOOTER************************************************/
 #footerextra{
 	background-color: #003580;
@@ -273,8 +322,15 @@ p.icontxt{
 #hotelextramenu img{
 	height: 13px;
 	width: 13px;
-/*****************************************************GOOGLE MAP ******************************************/
 }
+@media only screen and (max-width: 700px) {
+	#hotelextramenu{
+	  display: none;
+
+	}
+}
+/*****************************************************GOOGLE MAP ******************************************/
+
 #googlemap{
 	width: 100%;
 	height: auto;
@@ -323,6 +379,14 @@ p.roominfo{
 #hotelroominfoimg img{
  width: 100%;
  height: auto;
+}
+@media only screen and (max-width: 700px) {
+	#googlemap{
+		width: 100%;
+	}
+	#hotelroominfoimg{
+		display: none;
+	}
 }
 /***************************************************SHOW AND HIDE IN HOME *************************/
 #serbox{
@@ -421,6 +485,14 @@ p.roominfo{
 	height: auto;
 	float: right;
 }
+@media only screen and (max-width: 700px) {
+	.leftside{
+		width: 100%;
+	}
+	.rightside{
+		display: none;
+	}
+}
 /*--------------------------------------small icons------------------------------------------------*/
 .footericons{
 	width: 25%;
@@ -429,9 +501,6 @@ p.roominfo{
 	align-items: center;
 	margin: 0 auto;
 	padding-bottom: 1em;
-
-
-
 }
 .icon{
 display: inline;
@@ -448,18 +517,31 @@ display: inline;
 
 /*--------------------------------------Forms------------------------------------------------*/
 .errorbox{
-margin: 0 auto;
+  margin: 0 auto;
+	width: 80%;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   color: #b94a48;
   background-color: #f2dede;
-  border: 1px solid rgba(185, 74, 72, 0.3);
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-					font-size: 1.3em;
-					font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+.errorbox:empty{
+	opacity: 0;
+}
+.success-box:empty{
+	border: none;
 }
 
+.success-box{
+	margin: 0 auto;
+	  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	  color: #008230;
+	  background-color: #61D18A;
+		font-size: 1.2em;
+		font-family: Arial, Helvetica, sans-serif;
+
+}
 
 }
 .logout{
@@ -541,6 +623,18 @@ label{
 
 }
 
+#deletereservation{
+	background-color: #2079FE;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10em;
+	border-radius: 8px;
+	float: right;
+}
+
 button:hover {
   opacity: 0.8;
 }
@@ -549,6 +643,17 @@ form{
 	height: auto;
 	width: 100%;
 }
+@media only screen and (max-width: 700px) {
+	#registerForm, .registerForm{
+		width: 90%;
+
+	}
+	.footericons{
+		width: 100%;
+		height: auto;
+	}
+}
+
 /*--------------------------------------news page------------------------------------------------*/
 .newssection{
 	width: 100%;
@@ -616,8 +721,9 @@ a.deleteEvent{
 }
 .navright{
 	float: right;
-	width: 30%;
+	width: 20%;
 	margin-right: 10%;
+	background-color: #00062D;
 }
 
 .dropdown .dropbtn {
@@ -628,6 +734,7 @@ a.deleteEvent{
     padding: 10px 16px;
     background-color: inherit;
 				color: white;
+				cursor:pointer;
 }
 input:invalid{
 	border: 2px solid red;
@@ -656,6 +763,7 @@ input:invalid{
     text-decoration: none;
     display: block;
     text-align: left;
+		cursor:pointer;
 }
 
 .dropdown-content a:hover {
@@ -664,6 +772,26 @@ input:invalid{
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+@media only screen and (max-width: 700px) {
+	.navright{
+		float: right;
+		width: 100%;
+		margin-right: 0%;
+
+	}
+.dropdown {
+	align-items: center;
+	float: none;
+	margin: 0 auto;
+
+}
+.dropbtn {
+	width: 100%;
+}
+.dropdown-content {
+    width: 100%;
+}
 }
 /****************************************** SLIDER **************************************************************/
 #slider{
@@ -1025,6 +1153,34 @@ input.booking-form-inputs{
 .totalprice-div{
 	display: flex;
 }
+@media only screen and (max-width: 700px) {
+	#main-image-booking {
+		 background-color: rgba(0, 0, 0, 1);
+     height: auto;
+		  position: unset;
+	}
+	.booking-dates-left{
+		width: 100%;
+		float: none;
+
+	}
+	.booking-dates-right{
+		width: 100%;
+		float: none;
+
+	}
+	h1.book-title{
+		display: none;
+	}
+	.room-image-left{
+		display: none;
+	}
+	.room-text-right{
+		width: 100%;
+	}
+
+
+}
 /***************************************************** invoice************************/
 #confirmation{
 	width: 97%;
@@ -1245,4 +1401,28 @@ button[disabled]{
 }
 .col img{
 	height: auto;
+}
+
+#image_edit_user{
+	width: 300px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 3em;
+
+}
+#image_edit_user img{
+	width: 100%;
+	height: auto;
+}
+.edit-user-image-btn{
+	background-color: #2079FE;
+	color: white;
+	padding: 12px 18px;
+  font-size: 1em;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+  width: 100%;
+  margin-bottom: 1em;
+	margin: 0 auto;
 }

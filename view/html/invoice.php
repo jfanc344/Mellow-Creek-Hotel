@@ -6,6 +6,7 @@ if(!isset($_SESSION['Username'])) {
 }
 
 if(!isset($_SESSION['invoice'])) {
+  //$_SESSION['no_booking'] = 'true';
    header('Location: booking.php');
 }
 
@@ -27,7 +28,16 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 <html>
 <head>
   <title> Invoice </title>
-  <?php include('tags/header.html'); ?>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/ds8.css">
+  <script src="../js/java.js" type="text/javascript" defer="defer"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="../js/ajax.js" type="text/javascript" defer="defer">
+</script>
 
 </head>
 
@@ -50,7 +60,7 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 
 <div id="bookpage-rooms-container">
       <div id="confirmation">
-        <img src="../images/icons/tick.png" alt="tick"><p class="confirmation-text"> Your booking with Mellow Creek is complete</p>
+        <img src="../images/icons/tick.png" alt="tick"><p class="confirmation-text"> Your booking with Mellow Creek</p>
       </div>
 
 
@@ -97,13 +107,16 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 
 </div>
 
-<p class="sansserif" style="margin-top:3em;"> An email will be sent with this information.</p>
-<p class="sansserif" style="margin-top:0.5em;"><strong>Your order will be sent as soon as on of our staffs confirms his booking. </strong></p>
+
+
+<p class="sansserif" style="margin-top:0.5em;"><strong>If you have not paid yet you will have to do it at reception. </strong></p>
 <p class="sansserif" style="margin-bottom:2em;margin-top:0.5em;">If you have questions, comments or concerns, please contact our expert customer support team or go to the contact page.</p>
 <form class="" action="mellowcreek.php">
-<button id="exitinvoice" class="formbtn">continue</button>
+<button id="exitinvoice" class="formbtn" style="margin-bottom:2em;">DONE</button>
 </form>
 
+<input type="hidden" id="ajaxbookingID" value="<?php echo $row['BookingID'];?>">
+<button class="deleteEvent"   id="deletereservation" >DELETE</button>
 
 <!-- The Modal -->
 
@@ -116,7 +129,6 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
   }
   }
   ?>
-
   </article>
 </div>
   <?php

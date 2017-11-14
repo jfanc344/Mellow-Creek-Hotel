@@ -12,8 +12,18 @@ if(empty($_POST["Username"]) || empty($_POST["Password"])){
   echo '<script>alert("Both Fields are required")</script>';
 }
 else {
+
   $username = mysqli_real_escape_string($conn, $_POST["Username"]);
   $password = mysqli_real_escape_string($conn, $_POST["Password"]);
+
+  $query4 = "SELECT * FROM member WHERE Username = '$username'";
+  $result4 = mysqli_query($conn, $query4);
+
+  while($row = mysqli_fetch_array($result4)){
+  $invoice = $row['MemberID'];
+}
+
+
   $query = "SELECT * FROM member WHERE Username = '$username'";
   $result = mysqli_query($conn, $query);
   if(mysqli_num_rows($result) > 0)
@@ -22,7 +32,14 @@ else {
       if(password_verify($password, $row["Password"])){
         //return true;
         $_SESSION["Username"] = $username;
-        header("location:../view/html/mellowcreek.php");
+        //
+        $result2 = mysqli_query($conn, "SELECT MemberID FROM invoice WHERE MemberID = '$invoice'");
+          if(mysqli_num_rows($result2) == 0) {
+             header("location:../view/html/mellowcreek.php");
+          } else {
+            $_SESSION["invoice"] = $invoice;
+            header("location:../view/html/mellowcreek.php");
+          }
       }
       else{
         $_SESSION['login_error'] = 'bad login, try again';

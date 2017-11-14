@@ -5,6 +5,7 @@
   <div id="ulconteent">
     <li><a href="mellowcreek.php">HOME</a></li>
     <li><a href="booking.php">BOOK ROOM</a></li>
+    <li><a href="invoice.php">MY BOOKING</a></li>
     <li><a href="news.php">NEWS</a></li>
     <li><a href="gallery.php">GALLERY</a></li>
     <li><a href="about.php">ABOUT</a></li>
@@ -13,7 +14,20 @@
   </div>
     <div class="navright">
   <div class="dropdown">
-    <button class="dropbtn"><div class="iconProfile"><img src="../images/icons/profile.png" alt="profile">
+    <button class="dropbtn"><div class="iconProfile"><?php
+    if(isset($_SESSION['Username'])) {
+  $connection = mysqli_connect("localhost", "root", "", "mp_prac");
+  $username = $_SESSION['Username'];
+  $query = "SELECT * FROM member WHERE Username = '$username'"; //You don't need a ; like you do in SQL
+  $result = mysqli_query($connection, $query);
+
+  while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+  ?>
+<img  onerror="src='../images/icons/profile.png'" src="../images/profile/<?php echo $row['image']?>"/>  <?php
+  }
+  mysqli_close($connection); //Make sure to close out the database connection
+  }
+  ?>
     </div><?php echo ''.$_SESSION["Username"].'' ?>
       <i class="fa fa-caret-down"></i>
     </button>

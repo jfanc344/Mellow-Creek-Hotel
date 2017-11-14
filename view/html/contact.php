@@ -7,7 +7,15 @@ session_start();
 <html>
 <head>
   <title> Contact Page </title>
-  <?php include('tags/header.html'); ?>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/ds8.css">
+  <script src="../js/java.js" type="text/javascript" defer="defer"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="../js/ajax.js" type="text/javascript" defer="defer"></script>
 </head>
 
 <body>
@@ -56,21 +64,18 @@ include('nav/navAnonymous.html');
     <div id="registerForm" style="width: 70%;">
       <p class="formtitle">Feedback/Question Form </p>
 
-    <form  action="../../controller/insertproccess.php" method="post">
 
       <label><b>Your Name:</b></label>
-      <input type="text" placeholder="enter your name.." name="name">
+      <input type="text" placeholder="enter your name.." name="name" id="name">
 
       <label><b>Email:</b></label>
-      <input type="text" placeholder="email.." name="Email">
+      <input type="text" placeholder="email.." name="Email" id="Email">
 
       <label><b>Feedback/Question(s):</b></label>
-      <textarea type="text" placeholder="enter text.." name="feedback" rows="14"></textarea>
+      <textarea type="text" placeholder="enter text.." name="feedback" rows="14" id="feedback"></textarea>
 
-      <input type="hidden" name="action_type" value="feedback"/>
-
-      <button class="formbtn" type="submit">Submit</button>
-    </form>
+      <input type="button" class="formbtn" value="Send" style="display:inline;"  id="call_back_btn"/>
+      <textarea id="responseText" rows="8"></textarea>
     </div>
     <!--***************************************************MODALS*********************************-->
     <?php include('modals/loginmodals.php'); ?>

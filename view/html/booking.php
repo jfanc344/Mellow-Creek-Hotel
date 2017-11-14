@@ -18,7 +18,12 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 <html>
 <head>
   <title> Booking </title>
-  <?php include('tags/header.html'); ?>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/ds8.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../js/java.js" type="text/javascript" defer="defer"></script>
+    
 
 </head>
 
@@ -26,7 +31,10 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 
   <div id="header">
     <img src="../images/logo2.png" alt="logo">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="../js/storage.js" type="text/javascript"> </script>
   </div>
+
 
 
   <?php
@@ -56,17 +64,27 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 
     <?php
     if(isset($_SESSION['Booking_error'])) {
-      //the user has previosly attempted a logged in
       echo 'ERROR: Fail to create Booking.
       please make sure all fields are filled!<br>
-      (Note: If you already have a booking you are not allowed to create another).';
+      (Note: If you already have a Booking you are not allowed to create another).';
       unset($_SESSION['Booking_error']);
     }
-
+    if(isset($_SESSION['no_booking'])) {
+      echo 'You dont have a Booking yet, Please Book in this page';
+      unset($_SESSION['no_booking']);
+    }
 
     ?>
-
+    </div>
+    <div class="success-box" style="margin-top:2em; width:60%;">
+    <?php
+    if(isset($_SESSION['deleted'])) {
+      echo 'Booking deleted';
+      unset($_SESSION['deleted']);
+    }
+    ?>
 </div>
+
 
 <div id="bookpage-rooms-container">
   <h2 class="rooms-title">Select Room Type</h2>
@@ -189,7 +207,7 @@ while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through re
 </div>
 <input type="hidden" name="memberID" value="<?php echo $row["MemberID"] ?>">
 
-<button class="formbtn" >Book</button>
+<button class="formbtn" onclick="cmon()" >Book</button>
 
 
 
