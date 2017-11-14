@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2017 at 12:18 AM
+-- Generation Time: Nov 15, 2017 at 12:29 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -37,14 +37,6 @@ CREATE TABLE `booking` (
   `RoomType` varchar(255) NOT NULL,
   `totalprice` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `booking`
---
-
-INSERT INTO `booking` (`BookingID`, `MemberID`, `DateIn`, `DateOut`, `NumPeople`, `RoomType`, `totalprice`) VALUES
-(111, 1, '2017-11-16', '2017-11-17', 3, 'single', '120'),
-(130, 2, '2017-11-17', '2017-11-23', 2, 'single', '720');
 
 -- --------------------------------------------------------
 
@@ -83,14 +75,6 @@ CREATE TABLE `invoice` (
   `bookingID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `invoice`
---
-
-INSERT INTO `invoice` (`invoiceID`, `date`, `MemberID`, `bookingID`) VALUES
-(60, '2017-11-13', 1, 111),
-(78, '2017-11-14', 2, 130);
-
 -- --------------------------------------------------------
 
 --
@@ -110,12 +94,7 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`managerID`, `FirstName`, `LastName`, `Username_manager`, `Password_manager`) VALUES
-(1, 'admin', 'admin', 'admin', '$2y$10$HdfFes9rmmAle56y2l5lYuqK.Y03eJij0Oz5oQSTCYEmPZX5eDWty'),
-(2, 'admin2', 'admin2', 'admin2', '$2y$10$HqqKvufBqR93CR1tRBvYtOj435kb5YnaeWW3/Pig0XEECtU9JxpDK'),
-(4, 'seb', 'Fancutt', 'seb', '$2y$10$4.GJtS5ETx7LqxXvubCKSOB4IXTlBBzU4jRoQ4Drhy8OKMZj80X7m'),
-(5, 'Dan', 'Fancutt', 'dan', '$2y$10$czlvxusBFrCZECHmR6UBN.NBoIxMZS/qHoqVnkw1o8xHiPcH3B5Cu'),
-(6, 'admin5', 'admin5', 'admin5', '$2y$10$HWPEoIqCCvLHHU0u5R20MuWzyZm51CAWUHlQV279ScYZDDVfhMONK'),
-(7, 'eqweq', 'ewqeqw', 'eqwe', '$2y$10$kxs.AGXUPLGgQvPcBLh0aOeGehXTQ28L81a6nQUnjVgyJlsoI36Bi');
+(1, 'admin', 'admin', 'admin', '$2y$10$HdfFes9rmmAle56y2l5lYuqK.Y03eJij0Oz5oQSTCYEmPZX5eDWty');
 
 -- --------------------------------------------------------
 
