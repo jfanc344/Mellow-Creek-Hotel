@@ -1,20 +1,27 @@
 System Requirements:
 
-Supported web browsers- • Chrome
-                        • Microsoft Edge
-                        • Firefox
-                        • Internet Explorer 10 or later
-                        • Safari
-                        • Opera
-                        • Mobile
+Supported web browsers- ï¿½ Chrome
+                        ï¿½ Microsoft Edge
+                        ï¿½ Firefox
+                        ï¿½ Internet Explorer 10 or later
+                        ï¿½ Safari
+                        ï¿½ Opera
+                        ï¿½ Mobile
+
+
+Login:  Members-              uername: member  pass: member
+
+        Customer Service-     uername: service  pass: service
+
+        Admin-                uername: admin    pass: admin
 
 
 Deployment issues:
 
    - bootstrap on gallery page disables login dropdowns.
 
-   - 3rd party javascript breaks 'jquery', therefore ajax doesnt work unless the 
-     other 3rd party javascript is disabled. contact.php and invoice will only have jQuery 
+   - 3rd party javascript breaks 'jquery', therefore ajax doesnt work unless the
+     other 3rd party javascript is disabled. contact.php and invoice will only have jQuery
      CDN as 3rd party javascript.
-    
+
    - One of the jquery CDNs prevented SessionStorage from running.
